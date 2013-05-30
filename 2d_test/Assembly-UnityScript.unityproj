@@ -48,7 +48,6 @@
      <Compile Include="Assets\CameraShift.js" />
      <Compile Include="Assets\FollowCameraController.js" />
      <Compile Include="Assets\LadderController.js" />
-     <Compile Include="Assets\ShiftCameraController.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
