@@ -35,5 +35,6 @@ function Update () {
 	//  Multiply by time signature - 6 beats per 8 notes.
 	//  Divide by 10 because our orthographic projection is 10, and we need to keep things small.
 	//  Ugh. I don't know why it doesn't work as formula above, but it will not take it. So gogo magic number.
-	noteChartTransform.position.x -= .09375; 
+	//  THIS IS DIFFERENT ON EVERY MACHINE MAKE A BETTER SOLUTION PLS
+	noteChartTransform.position.x -= .10; 
 }
