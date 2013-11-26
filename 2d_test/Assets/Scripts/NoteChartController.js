@@ -9,8 +9,8 @@ public var secondsPerBeat:float = 60.0 / beatsPerMinute;
 //public var timeSigDenom = 8;
 //public var transformAmt:float = secondsPerBeat * 2 * (timeSigNum / timeSigDenom) / 10;
 
-private var startTime:double;
-private var noteChartTransform:Transform;
+private var startTime : double;
+private var noteChartTransform : Transform;
 
 function Start () {
 	audio.Play();
@@ -25,7 +25,7 @@ function Update () {
 	
 	if (elapsedTime >= secondsPerBeat) {
 		startTime = startTime + secondsPerBeat;
-		Debug.Log("Current Time: " + startTime);
+		//Debug.Log("Current Time: " + startTime);
 	}
 	
 	//  this transform makes zero sense but let me try to explain.

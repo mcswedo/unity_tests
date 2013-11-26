@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Editor\MyWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MouseCursorController.js">
     <Files>
-      <File FileName="Assets\Scripts\Editor\MyWindow.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\MouseCursorController.js" Line="28" Column="31" />
+      <File FileName="Assets\Scripts\MouseCursorController.js" Line="28" Column="31" />
+      <File FileName="Assets\NoteInputController.js" Line="20" Column="31" />
+      <File FileName="Assets\Scripts\NoteChartController.js" Line="40" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
