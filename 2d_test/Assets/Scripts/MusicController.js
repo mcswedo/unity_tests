@@ -3,15 +3,14 @@
 @script RequireComponent(AudioSource)
 
 public var beatsPerMinute:float;
-
 public var startTime:double;
-private var secondsPerBeat = 60.0 / beatsPerMinute;
-//private var i = 0;
 public var elapsedTime:double;
 
+private var secondsPerBeat = 60.0 / beatsPerMinute;
+private var noteChart;
+//private var i = 0;
 //var notes = [];
 
-private var noteChart;
 
 function Start () {
 	noteChart = GameObject.FindGameObjectWithTag("noteChart");
