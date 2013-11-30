@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MouseCursorController.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NoteChartController.js">
     <Files>
-      <File FileName="Assets/Scripts/MouseCursorController.js" Line="20" Column="28" />
-      <File FileName="Assets/Scripts/MusicController.js" Line="12" Column="18" />
-      <File FileName="Assets/Scripts/NoteChartController.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/NoteInputController.js" Line="105" Column="2" />
+      <File FileName="Assets\Scripts\MouseCursorController.js" Line="20" Column="28" />
+      <File FileName="Assets\Scripts\MouseCursorController.js" Line="20" Column="28" />
+      <File FileName="Assets\Scripts\MusicController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NoteChartController.js" Line="27" Column="42" />
+      <File FileName="Assets\Scripts\NoteInputController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

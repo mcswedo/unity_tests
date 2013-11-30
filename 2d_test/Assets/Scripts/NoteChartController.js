@@ -25,7 +25,6 @@ function Update () {
 	
 	if (elapsedTime >= secondsPerBeat) {
 		startTime = startTime + secondsPerBeat;
-		//Debug.Log("Current Time: " + startTime);
 	}
 	
 	//  this transform makes zero sense but let me try to explain.

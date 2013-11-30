@@ -18,14 +18,14 @@ function Start()
 {
 	beat = GameObject.FindGameObjectWithTag("beat");
 	Screen.showCursor = false;
-	beatXMin = camera.WorldToScreenPoint(beat.collider.bounds.min).x;
-	beatXMax = camera.WorldToScreenPoint(beat.collider.bounds.max).x;
+	beatXMin = camera.WorldToScreenPoint(beat.renderer.bounds.min).x;
+	beatXMax = camera.WorldToScreenPoint(beat.renderer.bounds.max).x;
 }
 
 function Update() {
 	frameCount++;
 	
-	if(frameCount >= 10)
+	if(frameCount >= 8)
 	{
 		arrayIndex++;
 		if(arrayIndex >= cursorTextureFrames.Length)
