@@ -12,7 +12,7 @@ var useFixedUpdate : boolean = true;
 
 // The current global direction we want the character to move in.
 @System.NonSerialized
-var inputMoveDirection : Vector2 = Vector2.zero;
+var inputMoveDirection : Vector3 = Vector3.zero;
 
 // Is the jump button held down? We use this interface instead of checking
 // for the jump button directly so this script can also be used by AIs.
@@ -27,7 +27,7 @@ class CharacterMotorMovement {
 	
 	// Curve for multiplying speed based on slope (negative = downwards)
 	var slopeSpeedMultiplier : AnimationCurve = AnimationCurve(Keyframe(-90, 1), Keyframe(0, 1), Keyframe(90, 0));
-
+	
 	// How fast does the character change speeds?  Higher is faster.
 	var maxGroundAcceleration : float = 30.0;
 	var maxAirAcceleration : float = 20.0;
@@ -93,9 +93,6 @@ class CharacterMotorJumping {
 	// To see if we are just in the air (initiated by jumping OR falling) see the grounded variable.
 	@System.NonSerialized
 	var jumping : boolean = false;
-	
-	@System.NonSerialized
-	var doubleJumping : boolean = false;
 	
 	@System.NonSerialized
 	var holdingJumpButton : boolean = false;
@@ -179,26 +176,8 @@ private var tr : Transform;
 private var controller : CharacterController;
 
 function Awake () {
-	//tr is set to null before it is assigned
-	//Debug.Log(tr);
-	
 	controller = GetComponent (CharacterController);
 	tr = transform;
-	
-	//tr is a REFERENCE to transform! Transforms are NOT STRUCTS.
-	//Debug.Log(tr.position);
-	//Debug.Log(transform.position);
-	//transform.position = new Vector3(3,3,3);
-	//Debug.Log(tr.position);
-	//Debug.Log(transform.position);
-	
-	//HOWEVER, Vector3's ARE STRUCTS, and AS SUCH, are COPIES of whatever you put into it.
-	//var test : Vector3 = transform.position;
-	//Debug.Log(test);
-	//Debug.Log(transform.position);
-	//transform.position = new Vector3(10,0,0);
-	//Debug.Log(test);
-	//Debug.Log(transform.position);
 }
 
 private function UpdateFunction () {
@@ -209,7 +188,7 @@ private function UpdateFunction () {
 	velocity = ApplyInputVelocityChange(velocity);
 	
 	// Apply gravity and jumping force
-	velocity = ApplyGravityAndJumping(velocity);
+	velocity = ApplyGravityAndJumping (velocity);
 	
 	// Moving platform support
 	var moveDistance : Vector3 = Vector3.zero;
@@ -311,7 +290,6 @@ private function UpdateFunction () {
 	else if (!grounded && IsGroundedTest()) {
 		grounded = true;
 		jumping.jumping = false;
-		jumping.doubleJumping = false;
 		SubtractNewPlatformVelocity();
 		
 		SendMessage("OnLand", SendMessageOptions.DontRequireReceiver);
@@ -605,5 +583,5 @@ function SetVelocity (velocity : Vector3) {
 }
 
 // Require a character controller to be attached to the same game object
-	@script RequireComponent (CharacterController)
+@script RequireComponent (CharacterController)
 @script AddComponentMenu ("Character/Character Motor")
